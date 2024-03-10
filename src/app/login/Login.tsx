@@ -2,7 +2,6 @@
 
 import { useAuthContext } from "@/context/AuthContext";
 import { Input } from "../components/Input";
-import { Loading } from "../components/Loading";
 import { useModifyUser } from "../hooks/useModifyUser";
 import { LayoutFormUser } from "../components/LayoutFormUser";
 
@@ -11,7 +10,8 @@ export default function Login() {
   const { user, loading, errors, handleChange, handleFormSubmit } =
     useModifyUser();
 
-  const onSubmitLogin = () => {
+  const onSubmitLogin = (e:any) => {
+    e.preventDefault()
     if (authContext) {
       handleFormSubmit(authContext.login);
     }
