@@ -31,11 +31,12 @@ export const ContentList = ({ nameContent, title }: IContentListProps) => {
 
   return (
     <>
-      <h3 className="text-center font-bold text-xl mt-5 mb-10">{title}</h3>   
+      <h3 className="text-center font-bold text-xl mt-5 mb-10">{title}</h3>
       {listContent ? (
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {listContent.map((movie: any) => (
             <CardVideo
+              key={movie.nameSrc}
               videoSrc={movie.videoSrc}
               previewSrc={movie.previewSrc}
               title={movie.title}

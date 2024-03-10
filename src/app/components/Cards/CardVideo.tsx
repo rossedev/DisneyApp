@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -24,12 +25,13 @@ export const CardVideo = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img
+        <Image
           src={previewSrc}
           alt={title}
           className={`w-full h-full object-cover transition-opacity ${
             isHovered ? "opacity-20" : "opacity-100"
           }`}
+          fill={true}
         />
 
         <video

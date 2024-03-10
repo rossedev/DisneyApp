@@ -32,6 +32,7 @@ export default function Home() {
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-5">
         {categoryContext?.categories.map((category: ICategories) => (
           <Card
+            key={category.name}
             name={category.name}
             title={category.title}
             description={category.description}

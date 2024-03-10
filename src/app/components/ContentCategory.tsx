@@ -9,6 +9,7 @@ export const ContentCategory = ({ listContent, categorySelect }: any) => {
           (content: any) =>
             content.category === categorySelect && (
               <CardVideo
+                key={content.nameSrc}
                 videoSrc={content.videoSrc}
                 previewSrc={content.previewSrc}
                 title={content.title}
