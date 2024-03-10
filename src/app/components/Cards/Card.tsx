@@ -23,7 +23,7 @@ export const Card = (props: ICardProps) => {
         <Image
           className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-125"
           src={img}
-          alt="fff"
+          alt={title}
           fill={true}
         />
       </div>

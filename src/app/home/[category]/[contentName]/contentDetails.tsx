@@ -16,7 +16,7 @@ export const ContentDetails = ({ contentName }: IContentProps) => {
   }, []);
 
   const handleContent = () => {
-    const contentsList = categoryContext?.contentslist || [];
+    const contentsList = categoryContext?.contents || [];
     const allContent = contentsList.filter(
       (content) => content.nameSrc === contentName
     );

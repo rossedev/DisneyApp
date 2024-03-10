@@ -20,14 +20,14 @@ export const CardVideo = ({
   return (
     <Link href={`/home/${category}/${nameSrc}`}>
       <div
-        className="relative overflow-hidden transition-transform duration-300 ease-in-out transform-gpu hover:scale-105 rounded-md"
+        className="relative overflow-hidden transition-transform duration-300 ease-in-out transform-gpu hover:scale-105 rounded-md min-h-full max-h-52"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <img
           src={previewSrc}
           alt={title}
-          className={`w-full h-auto transition-opacity ${
+          className={`w-full h-full object-cover transition-opacity ${
             isHovered ? "opacity-20" : "opacity-100"
           }`}
         />

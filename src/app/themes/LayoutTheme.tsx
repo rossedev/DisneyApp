@@ -9,12 +9,14 @@ export default function LayoutTheme({
 }) {
   const themeContext = useThemeContext();
 
-  const dark = "text-white-200 ";
-  const light = "bg-gradient-light text-gray-800 ";
+  const dark = "";
+  const light = "bg-gradient-light";
   
   return (
     <body
-      className={`${themeContext?.isLightMode ? light : dark} min-h-screen`}
+      className={`${
+        themeContext?.isLightMode ? light : dark
+      } text-gray-100 min-h-screen`}
     >
       {children}
     </body>

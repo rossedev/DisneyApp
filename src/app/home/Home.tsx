@@ -4,7 +4,7 @@ import { useAuthContext } from "@/context/AuthContext";
 import { Card } from "../components/Cards/Card";
 import { useState } from "react";
 import { useCategoryContext } from "@/context/CategoryContent";
-import { ContentCategory } from "../components/contentCategory";
+import { ContentCategory } from "../components/ContentCategory";
 
 export interface ICategories {
   name: string;
@@ -44,7 +44,7 @@ export default function Home() {
       <div className="">
         {categorySelect && (
           <ContentCategory
-            listContent={categoryContext?.contentslist}
+            listContent={categoryContext?.contents}
             categorySelect={categorySelect}
           />
         )}
