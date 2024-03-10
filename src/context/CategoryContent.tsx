@@ -38,7 +38,6 @@ export const CategoryProvider = ({ children }: { children: ReactNode }) => {
         setCategories(parseCategories);
         setContents(parseContents);
       } else {
-         console.log("Something");
         const categoriesSnap = await getDocs(collection(db, "categories"));
         const contentsSnap = await getDocs(collection(db, "contents"));
 

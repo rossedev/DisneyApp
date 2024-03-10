@@ -6,7 +6,6 @@ import { IoMoonSharp, IoSunnyOutline } from "react-icons/io5";
 import { Switch } from "../Switch";
 import { useAuthContext } from "@/context/AuthContext";
 import { redirect } from "next/navigation";
-import Link from "next/link";
 import { SlMenu } from "react-icons/sl";
 import { IoMdClose } from "react-icons/io";
 import { HeaderMenu } from "./HeaderMenu";
@@ -25,6 +24,7 @@ export const Header = () => {
     authContext?.logout().then(() => {
         localStorage.removeItem("categories");
         localStorage.removeItem("contents");
+        localStorage.removeItem("theme");
       redirect("/");
     
 
