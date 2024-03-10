@@ -13,14 +13,15 @@ export const ContentList = ({ nameContent, title }: IContentListProps) => {
   const [listContent, setListContent] = useState<any | null>([]);
 
   useEffect(() => {
-    handleContent();
-  }, []);
+    handleContent(categoryContext);
+  }, [categoryContext]);
 
-  const handleContent = () => {
+  const handleContent = (categoryContext: any) => {
     const contents = categoryContext?.contents || [];
-    const allListContent = contents.filter(
-      (content) => content.type === nameContent
-    );
+
+    const allListContent = contents.filter((content: any) => {
+      return content.type === nameContent;
+    });
 
     if (allListContent.length > 0) {
       setListContent([...allListContent]);

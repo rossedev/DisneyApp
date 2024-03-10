@@ -25,19 +25,36 @@ export const CategoryProvider = ({ children }: { children: ReactNode }) => {
       const auxCategories: any[] = [];
       const auxContents: any[] = [];
 
-      const categoriesSnap = await getDocs(collection(db, "categories"));
-      const contentsSnap = await getDocs(collection(db, "contents"));
+      if (
+        localStorage.getItem("categories") &&
+        localStorage.getItem("contents")
+      ) {
+        const parseCategories = JSON.parse(
+          localStorage.getItem("categories") || ""
+        );
+        const parseContents = JSON.parse(
+          localStorage.getItem("contents") || ""
+        );
+        setCategories(parseCategories);
+        setContents(parseContents);
+      } else {
+         console.log("Something");
+        const categoriesSnap = await getDocs(collection(db, "categories"));
+        const contentsSnap = await getDocs(collection(db, "contents"));
 
-      categoriesSnap.forEach((doc: any) => {
-        auxCategories.push(doc.data());
-      });      
+        categoriesSnap.forEach((doc: any) => {
+          auxCategories.push(doc.data());
+        });
 
-      contentsSnap.forEach((doc: any) => {
-        auxContents.push(doc.data());
-      });
+        contentsSnap.forEach((doc: any) => {
+          auxContents.push(doc.data());
+        });
 
-      setCategories(auxCategories);
-      setContents(auxContents);
+        setCategories(auxCategories);
+        setContents(auxContents);
+        localStorage.setItem("categories", JSON.stringify(auxCategories));
+        localStorage.setItem("contents", JSON.stringify(auxContents));
+      }
     };
     getCategoriesList();
   }, []);

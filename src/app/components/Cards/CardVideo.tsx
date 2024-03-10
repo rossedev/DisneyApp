@@ -31,7 +31,8 @@ export const CardVideo = ({
           className={`w-full h-full object-cover transition-opacity ${
             isHovered ? "opacity-20" : "opacity-100"
           }`}
-          fill={true}
+          width={500}
+          height={500}
         />
 
         <video

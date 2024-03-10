@@ -6,10 +6,10 @@ export const HeaderMenu = () => {
       <Link href="/home" shallow>
         Home
       </Link>
-      <Link href="/home/movies" shallow>
+      <Link href="/home/movies">
         Movies
       </Link>
-      <Link href="/home/series" shallow>
+      <Link href="/home/series">
         Series
       </Link>
       <Link href="/home" shallow>
