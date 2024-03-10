@@ -33,6 +33,7 @@ export const CardVideo = ({
           }`}
           width={500}
           height={500}
+          priority
         />
 
         <video

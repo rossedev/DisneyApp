@@ -42,7 +42,7 @@ export const ContentList = ({ nameContent, title }: IContentListProps) => {
               previewSrc={movie.previewSrc}
               title={movie.title}
               category={movie.category}
-              nameSrc={movie.nameSrc}
+              nameSrc={movie.nameSrc}              
             />
           ))}
         </div>

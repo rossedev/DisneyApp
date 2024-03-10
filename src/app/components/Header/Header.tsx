@@ -21,8 +21,13 @@ export const Header = () => {
   };
 
   const handleLogout = () => {
+
     authContext?.logout().then(() => {
+        localStorage.removeItem("categories");
+        localStorage.removeItem("contents");
       redirect("/");
+    
+
     });
   };
 
