@@ -4,7 +4,7 @@ export const Video = () => {
     <>
       <video
         className="w-full h-screen  object-top object-cover lg:object-fill animate-fade animate-ease-in-out animate-duration-1000"
-        src="/disney-intro.mp4"
+        src="/disney-preview.mp4"
         autoPlay
         loop
         muted
@@ -14,7 +14,7 @@ export const Video = () => {
       ></video>
       <video
         className="w-full absolute -bottom-0 blur-3xl -z-40"
-        src="/disney-intro.mp4"
+        src="/disney-preview.mp4"
         autoPlay
         loop
         muted
