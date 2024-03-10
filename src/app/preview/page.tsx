@@ -1,4 +1,4 @@
-import Preview from "./preview/Preview";
+import Preview from "./Preview";
 
 export default function Page() {
   return <Preview />;

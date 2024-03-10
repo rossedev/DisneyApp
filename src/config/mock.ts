@@ -1,0 +1,80 @@
+export const categories = [
+  {
+    name: "disney",
+    title: "Disney",
+    description: "Lorem ipsum",
+    img: "/dinsey-logo.jpg",
+  },
+  {
+    name: "pixar",
+    title: "Pixar",
+    description: "Lorem ipsum",
+    img: "/pixar-logo.jpg",
+  },
+  {
+    name: "marvel",
+    title: "Marvel",
+    description: "Lorem ipsum",
+    img: "/marvel-logo.png",
+  },
+  {
+    name: "star_wars",
+    title: "Star Wars",
+    description: "Lorem ipsum",
+    img: "/star-logo.jpg",
+  },
+  {
+    name: "national_geographic",
+    title: "National Geographic",
+    description: "Lorem ipsum",
+    img: "/national-logo.png",
+  },
+];
+
+export const listContent = [
+  {
+    title: "Moana",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sagittis suscipit enim id blandit, per lacinia tempus dui sed lacus faucibus imperdiet diam feugiat. Elementum urna aliquam ultrices fusce suspendisse integer molestie laoreet phasellus platea lacus, mauris bibendum hac placerat fringilla sociosquduis arcu id et. Vulputate aliquam consequat libero malesuada vitae himenaeos suspendisse penatibus suscipit, pulvinar sollicitudin mattis phasellus mauris ut commodo feugiat, etfames netus gravida proin tortor interdum aenean.",
+    previewSrc: "/dinsey-logo.jpg",
+    videoSrc: "/disney-intro.mp4",
+    category: "disney",
+    favorite: true,
+    nameSrc: "moana",
+    type: "serie",
+    genre: "Animation / Comedy / Adventure / Musical / Fantasy",
+  },
+  {
+    title: "Moana",
+    description: "Moana Lorem...",
+    previewSrc: "/dinsey-logo.jpg",
+    videoSrc: "/disney-intro.mp4",
+    category: "disney",
+    favorite: true,
+    nameSrc: "moana1",
+    type: "movie",
+    genre: "Terror",
+  },
+  {
+    title: "Super",
+    description: "Super Lorem...",
+    previewSrc: "/dinsey-logo.jpg",
+    videoSrc: "/disney-intro.mp4",
+    category: "marvel",
+    favorite: false,
+    nameSrc: "super",
+    type: "movie",
+    genre: "Action / Comedy",
+  },
+  {
+    title: "Star Wars: Episode I - The Phantom Menace",
+    description: "Clon Lorem...",
+    previewSrc: "/dinsey-logo.jpg",
+    videoSrc: "/disney-intro.mp4",
+    category: "star_war",
+    favorite: true,
+    nameSrc: "clon",
+    type: "serie",
+    genre: "Space opera / Blockbuster / Science fiction",
+  },
+];
